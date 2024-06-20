@@ -1,2 +1,2 @@
 # pc-project
-Image Processing using K-means Clustering, OpenMP and MPI
+Image Processing using Sobel Edge Detection, OpenMP and MPI
