@@ -30,15 +30,13 @@ void sobel_edge_detection(const cv::Mat& src, cv::Mat& dst)
 
 int main(int argc, char* argv[])
 {
-    if (argc != 4)
+    if (argc != 2)
     {
-        std::cerr << "Usage: " << argv[0] << " <image_path>" << " <k>" << " <max_iter>" << std::endl;
+        std::cerr << "Usage: " << argv[0] << " <image_path>" << std::endl;
         return -1;
     }
 
     fs::path image_path = argv[1];
-    int k = 5; // TODO
-    int max_iter = 100; // TODO
     cv::Mat image;
 
     image = cv::imread(image_path, cv::IMREAD_GRAYSCALE);
