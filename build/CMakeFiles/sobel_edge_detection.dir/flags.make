@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/include/x86_64-linux-gnu/mpich -isystem /usr/include/opencv4
+CXX_INCLUDES = -isystem /usr/include/opencv4
 
-CXX_FLAGS = -fopenmp -std=gnu++11
+CXX_FLAGS = -std=gnu++17
 

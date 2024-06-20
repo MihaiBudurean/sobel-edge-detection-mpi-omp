@@ -69,34 +69,30 @@ include CMakeFiles/sobel_edge_detection.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sobel_edge_detection.dir/flags.make
 
-CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o: CMakeFiles/sobel_edge_detection.dir/flags.make
-CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o: ../sobel_edge_detection.cpp
-CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o: CMakeFiles/sobel_edge_detection.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mihai/repos/pc-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o -MF CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o.d -o CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o -c /home/mihai/repos/pc-project/sobel_edge_detection.cpp
+CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o: CMakeFiles/sobel_edge_detection.dir/flags.make
+CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o: ../src/sobel_edge_detection.cpp
+CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o: CMakeFiles/sobel_edge_detection.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mihai/repos/pc-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o -MF CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o.d -o CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o -c /home/mihai/repos/pc-project/src/sobel_edge_detection.cpp
 
-CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mihai/repos/pc-project/sobel_edge_detection.cpp > CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.i
+CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mihai/repos/pc-project/src/sobel_edge_detection.cpp > CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.i
 
-CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mihai/repos/pc-project/sobel_edge_detection.cpp -o CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.s
+CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mihai/repos/pc-project/src/sobel_edge_detection.cpp -o CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.s
 
 # Object files for target sobel_edge_detection
 sobel_edge_detection_OBJECTS = \
-"CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o"
+"CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o"
 
 # External object files for target sobel_edge_detection
 sobel_edge_detection_EXTERNAL_OBJECTS =
 
-sobel_edge_detection: CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o
+sobel_edge_detection: CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o
 sobel_edge_detection: CMakeFiles/sobel_edge_detection.dir/build.make
-sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libmpichcxx.so
-sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libmpich.so
 sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.5.4d
-sobel_edge_detection: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
-sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libpthread.a
 sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libopencv_videoio.so.4.5.4d
 sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.5.4d
 sobel_edge_detection: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.5.4d

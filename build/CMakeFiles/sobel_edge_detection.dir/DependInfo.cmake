@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mihai/repos/pc-project/sobel_edge_detection.cpp" "CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o" "gcc" "CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o.d"
+  "/home/mihai/repos/pc-project/src/sobel_edge_detection.cpp" "CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o" "gcc" "CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o.d"
   )
 
 # Targets to which this target links.

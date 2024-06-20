@@ -129,29 +129,29 @@ sobel_edge_detection/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/build
 .PHONY : sobel_edge_detection/fast
 
-sobel_edge_detection.o: sobel_edge_detection.cpp.o
-.PHONY : sobel_edge_detection.o
+src/sobel_edge_detection.o: src/sobel_edge_detection.cpp.o
+.PHONY : src/sobel_edge_detection.o
 
 # target to build an object file
-sobel_edge_detection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.o
-.PHONY : sobel_edge_detection.cpp.o
+src/sobel_edge_detection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.o
+.PHONY : src/sobel_edge_detection.cpp.o
 
-sobel_edge_detection.i: sobel_edge_detection.cpp.i
-.PHONY : sobel_edge_detection.i
+src/sobel_edge_detection.i: src/sobel_edge_detection.cpp.i
+.PHONY : src/sobel_edge_detection.i
 
 # target to preprocess a source file
-sobel_edge_detection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.i
-.PHONY : sobel_edge_detection.cpp.i
+src/sobel_edge_detection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.i
+.PHONY : src/sobel_edge_detection.cpp.i
 
-sobel_edge_detection.s: sobel_edge_detection.cpp.s
-.PHONY : sobel_edge_detection.s
+src/sobel_edge_detection.s: src/sobel_edge_detection.cpp.s
+.PHONY : src/sobel_edge_detection.s
 
 # target to generate assembly for a file
-sobel_edge_detection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/sobel_edge_detection.cpp.s
-.PHONY : sobel_edge_detection.cpp.s
+src/sobel_edge_detection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sobel_edge_detection.dir/build.make CMakeFiles/sobel_edge_detection.dir/src/sobel_edge_detection.cpp.s
+.PHONY : src/sobel_edge_detection.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sobel_edge_detection"
-	@echo "... sobel_edge_detection.o"
-	@echo "... sobel_edge_detection.i"
-	@echo "... sobel_edge_detection.s"
+	@echo "... src/sobel_edge_detection.o"
+	@echo "... src/sobel_edge_detection.i"
+	@echo "... src/sobel_edge_detection.s"
 .PHONY : help
 
 
