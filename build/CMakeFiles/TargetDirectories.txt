@@ -1,3 +1,0 @@
-/home/mihai/repos/pc-project/build/CMakeFiles/sobel_edge_detection.dir
-/home/mihai/repos/pc-project/build/CMakeFiles/edit_cache.dir
-/home/mihai/repos/pc-project/build/CMakeFiles/rebuild_cache.dir

@@ -1,11 +1,12 @@
 #include <iostream>
 #include <filesystem>
 #include <opencv2/opencv.hpp>
+#include <omp.h>
 
 namespace fs = std::filesystem;
-namespace ch = std::chrono;
 
-void sobel_edge_detection(const cv::Mat& src, cv::Mat& dst)
+// Parallel Sobel Edge Detection using OpenMP
+void sobel_edge_detection_omp(const cv::Mat& src, cv::Mat& dst)
 {
     int rows = src.rows;
     int cols = src.cols;
@@ -16,6 +17,7 @@ void sobel_edge_detection(const cv::Mat& src, cv::Mat& dst)
 
     dst = cv::Mat(rows, cols, CV_32F);
 
+    #pragma omp parallel for collapse(2)
     for (int y = 0; y < rows; ++y)
         for (int x = 0; x < cols; ++x)
         {
@@ -53,17 +55,17 @@ int main(int argc, char* argv[])
 
     cv::Mat edge_image;
 
-    auto start = ch::high_resolution_clock::now();
-    sobel_edge_detection(image, edge_image);
-    auto stop = ch::high_resolution_clock::now();
+    double start = omp_get_wtime();
+    sobel_edge_detection_omp(image, edge_image);
+    double stop = omp_get_wtime();
 
-    ch::duration<double> duration = stop - start;
+    double duration = stop - start;
 
-    std::cout << "Sequential Sobel Edge Detection Time: " << duration.count() << " seconds" << std::endl;
+    std::cout << "OpenMP Sobel Edge Detection Time: " << duration << " seconds" << std::endl;
     
     std::string relative_path =  image_path.string();
     std::string relative_path_without_extension = relative_path.substr(0, relative_path.find_last_of("."));
-    cv::imwrite(relative_path_without_extension + "_edge_seq.jpg", edge_image);
+    cv::imwrite(relative_path_without_extension + "_edge_omp.jpg", edge_image);
 
     return 0;
 }
