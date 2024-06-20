@@ -1,10 +1,10 @@
 # Execute sequential algorithm
 export OMP_NUM_THREADS=1
-./build/sobel_edge_detection ./images/test1.jpg
+./build/sobel_edge_detection ./images/test3.jpg
 
 # Execute OpenMP algorithm
-export OMP_NUM_THREADS=4
-./build/sobel_edge_detection_omp ./images/test1.jpg
+export OMP_NUM_THREADS=8
+./build/sobel_edge_detection_omp ./images/test3.jpg
 
 # Execute MPI algorithm
-mpirun -np 4 ./build/sobel_edge_detection_mpi ./images/test1.jpg
+mpirun -np 8 ./build/sobel_edge_detection_mpi ./images/test3.jpg
