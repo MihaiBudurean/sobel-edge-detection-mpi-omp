@@ -7,4 +7,4 @@ export OMP_NUM_THREADS=8
 ./build/sobel_edge_detection_omp ./images/test3.jpg
 
 # Execute MPI algorithm
-mpirun -np 8 ./build/sobel_edge_detection_mpi ./images/test3.jpg
+mpirun -np 3 ./build/sobel_edge_detection_mpi ./images/test3.jpg

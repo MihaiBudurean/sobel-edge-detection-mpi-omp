@@ -6,38 +6,60 @@
 namespace fs = std::filesystem;
 
 // Parallel Sobel Edge Detection using MPI
+// Parallel Sobel Edge Detection using MPI
 void sobel_edge_detection_mpi(const cv::Mat& src, cv::Mat& dst, int rank, int size)
 {
+    // Get the number of rows and columns in the source image
     int rows = src.rows;
     int cols = src.cols;
+
+    // Calculate the number of rows to process for each process
     int local_rows = rows / size;
+
+    // Determine the starting and ending rows for the current process
     int start_row = rank * local_rows;
     int end_row = (rank == size - 1) ? rows : start_row + local_rows;
 
+    // Extract the portion of the image that the current process will handle
     cv::Mat local_src = src.rowRange(start_row, end_row);
+
+    // Create matrices to store the gradients in x and y directions for the local portion
     cv::Mat grad_x, grad_y;
+
+    // Compute the gradient in the x direction using the Sobel operator for the local portion
     cv::Sobel(local_src, grad_x, CV_32F, 1, 0);
+
+    // Compute the gradient in the y direction using the Sobel operator for the local portion
     cv::Sobel(local_src, grad_y, CV_32F, 0, 1);
 
+    // Initialize the local destination image with the same width and the calculated local height
     cv::Mat local_dst(local_rows, cols, CV_32F);
 
+    // Iterate over each pixel in the local portion of the image
     for (int y = 0; y < local_rows; ++y)
         for (int x = 0; x < cols; ++x)
         {
+            // Get the gradient values at the current pixel in x and y directions
             float gx = grad_x.at<float>(y, x);
             float gy = grad_y.at<float>(y, x);
+
+            // Compute the magnitude of the gradient vector using the Euclidean norm
             local_dst.at<float>(y, x) = std::sqrt(gx * gx + gy * gy);
         }
 
+    // Convert the floating-point gradient magnitude image to an 8-bit image
     local_dst.convertTo(local_dst, CV_8U);
 
+    // The root process initializes the destination image with the full size
     if (rank == 0)
         dst = cv::Mat(rows, cols, CV_8U);
 
+    // Gather the processed local images from all processes into the destination image on the root process
     MPI_Gather(local_dst.data, local_rows * cols, MPI_UNSIGNED_CHAR,
                dst.data, local_rows * cols, MPI_UNSIGNED_CHAR,
                0, MPI_COMM_WORLD);
 }
+
 
 int main(int argc, char* argv[])
 {
