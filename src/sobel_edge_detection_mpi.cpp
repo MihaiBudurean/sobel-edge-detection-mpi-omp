@@ -119,7 +119,7 @@ int main(int argc, char* argv[])
     if (rank == 0)
     {
         double duration = stop - start;
-        std::cout << "Sequential Sobel Edge Detection Time: " << duration << " seconds" << std::endl;
+        std::cout << "MPI Sobel Edge Detection Time: " << duration << " seconds" << std::endl;
         std::string relative_path =  image_path.string();
         std::string relative_path_without_extension = relative_path.substr(0, relative_path.find_last_of("."));
         cv::imwrite(relative_path_without_extension + "_edge_mpi.jpg", edge_image);
