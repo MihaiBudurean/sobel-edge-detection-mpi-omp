@@ -60,7 +60,7 @@ make
 Run all algorithms easily using the provided script:
 
 ```bash
-bash ../run.sh
+./run.sh
 ```
 
 This script executes:
